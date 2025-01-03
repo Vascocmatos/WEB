@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2_a85234</title>
+    <link rel="stylesheet" href="/css/css_.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/tecnologias_web/trabalho_pratico_tp2/javascript.js"></script>
+    
+</head>
+
+<body>
+    <div>
+        <div class="caixa_tema">
+            <form id="escolher_tema">
+                <h3 style="text-align: center;">Escolha o tema:</h3>
+                <input style="margin-left: 20%;" id="escolher_tema_escuro" type="radio" name="tema" value="escuro" checked>
+                <label for="escolher_tema_escuro">Tema Escuro</label>
+                <br>
+                <input style="margin-left: 20%;" id="escolher_tema_claro" type="radio" name="tema" value="claro">
+                <label for="escolher_tema_claro">Tema Claro</label>
+            </form>
+        </div>
+
+        <nav class="caixa_menu">
+            <h1 style="text-align: center;">Menu</h1>
+            
+            <button id="dropdown-btn" class="caixa_pequena">Sub Menu</button>
+            <div>
+                <br>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="#" class="caixa_pequena">Inicio</a>
+                    <a href="#corpo" class="caixa_pequena">Corpo</a>
+                    <a href="#meio" class="caixa_pequena">Meio da pagina</a>
+                    <a href="#footer" class="caixa_pequena">Footer</a>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="caixa_login">
+            <form>
+                <button id="set-cookie1" class="caixa_pequena">Set Cookie utilizador1</button>
+                <button id="set-cookie2" class="caixa_pequena">Set Cookie utilizador2</button>
+                <button id="get-cookie" class="caixa_pequena">Get Cookie</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="banner_lateral" >
+        <a href="https://www.ualg.pt" target="_blank">
+        <img src="/tecnologias_web/trabalho_pratico_tp2/imagens/logo_ualg.png" alt="Logotipo" style="width: 100%;">
+        </a>
+        <video width="100%" controls>
+            <source src="/tecnologias_web/trabalho_pratico_tp2/imagens/video.mp4" type="video/mp4" style="width: 100%;">
+        </video>
+        <img id="imagem" src="/tecnologias_web/trabalho_pratico_tp2/imagens/youtube_00.jpg" alt="Imagem inicial" style="width: 100%;">
+        <img id="imagem2" src="/tecnologias_web/trabalho_pratico_tp2/imagens/my8AUCgUhKERqBBwdPQuXG-1200-80.jpg" alt="Imagem inicial2" style="width: 100%;">
+    </div>
+    
+
+    <div id="corpo" class="corpo">
+        <div class="inicio">
+            <img src="/tecnologias_web/trabalho_pratico_tp2/imagens/0_yv91Y6QOQLgeuqX1.jpg" alt="imagem_HTML" onclick="openPopup('/tecnologias_web/trabalho_pratico_tp2/imagens/0_yv91Y6QOQLgeuqX1.jpg')">
+        </div>
+        <br><br><br>
+        <div>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br>
+           <div id="meio" style="height: 50vh;">meio da pagina</div>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+
+    <footer id="footer">
+        Vasco Matos a85234<br>
+        Docente: Mário Saleiro<br>
+        Tecnologias Web<br>
+        2024
+    </footer>
+   
+    <script>
+        document.querySelectorAll('input[name="tema"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                if (this.value === 'escuro') {
+                    document.body.classList.remove('tema-claro');
+                } else if (this.value === 'claro') {
+                    document.body.classList.add('tema-claro');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

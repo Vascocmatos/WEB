@@ -1,0 +1,195 @@
+body {
+    background-color: #333333;
+    color: #cccccc;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.inicio img {
+    width: 90%;
+    padding: 1%;
+    background-color: #cccccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.corpo {
+    background: linear-gradient(to bottom, #444444, #8a8a8a);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 150px;
+    margin-bottom: 2%;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1%;
+    min-height: calc(100vh - 10px);
+}
+
+.caixa_menu {
+    background-color: #4d4d4d;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 20%;
+    right: 20%;
+}
+
+.caixa_tema:hover {
+    background-color: #5a5a5a;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 20px;
+    padding: 0px;
+    position: fixed;
+    left: 0%;
+    right: 90%;
+}
+
+.caixa_tema {
+    background-color: #4d4d4d;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 20px;
+    padding: 0px;
+    position: fixed;
+    left: 0%;
+    right: 90%;
+}
+
+.caixa_login {
+    background-color: #4d4d4d;
+    margin-top: 0px;
+    margin-right: 0px;
+    border-radius: 20px;
+    padding: 1%;
+    position: fixed;
+    left: 90%;
+    right: 0%;
+    align-items: center;
+    text-align: center;
+}
+
+
+.caixa_pequena{
+    background-color: #868686;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caixa_pequena:hover{
+    background-color: rgb(95, 95, 95);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
+footer {
+    background-color: #1d1d1d;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+body.tema-claro {
+    background-color: #f5f5f5;
+    color: #2b2b2b;
+}
+
+body.tema-claro .corpo {
+    background: linear-gradient(to bottom, #8a8a8a, #444444);
+    color: #2b2b2b;
+}
+
+body.tema-claro .caixa_menu {
+    background-color: #bebebe;
+
+}
+
+body.tema-claro .caixa_tema {
+    background-color: #d1d1d1;
+    padding: 0%;
+}
+
+body.tema-claro .caixa_tema:hover {
+    background-color: #727272;
+}
+
+body.tema-claro footer {
+    background-color: #bebebe;
+    color: #1d1d1d;
+}
+
+body.tema-claro .caixa_pequena{
+    background-color: #b1b1b1;
+
+}
+
+body.tema-claro .caixa_pequena:hover{
+    background-color: #727272;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.banner_lateral {
+    position: fixed;
+    margin-top:5cm; 
+    left: 0;
+    right: 86%; 
+    width: 20%; 
+    height: 75%; 
+    background-color: #CCCCCC; 
+    border-radius: 10px; 
+    padding: 10px;
+    text-align: center; 
+    z-index: 999; 
+    max-width: fit-content;
+    min-width: none;
+}
