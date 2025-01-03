@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3</title>
+    <link rel="stylesheet" href="css_.css">
+</head>
+<body>
+    <h1>Envio de ficheiros</h1>
+    <form action="base.php" method="POST" enctype="multipart/form-data" class="caixa" >
+        <label for="file">Escolha um ficheiro:</label>
+        <input type="file" id="file" name="file" required>
+        <br><br>
+        <button type="submit">Carregar</button>
+    </form>
+
+    <div id="listar_ficheiros_container">
+        <h1>Listar ficheiros</h1>
+        <button onclick="carregarArquivos()">Listar</button>
+        <div id="lista-arquivos"></div>
+    </div>
+    
+    <script>
+        function carregarArquivos() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("lista-arquivos").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "listar_arquivos.php", true);
+            xhttp.send();
+        }
+    </script>
+
+    <script>
+        function excluirArquivo(nomeArquivo) {
+            if (confirm("Tem certeza que deseja excluir o arquivo '" + nomeArquivo + "'?")) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert(this.responseText);
+                        carregarArquivos(); 
+                    }
+                };
+                xhttp.open("GET", "eliminar.php?nome=" + nomeArquivo, true);
+                xhttp.send();
+            }
+        }
+    </script>
+
+    <script>
+        function download(nomeArquivo) {
+            window.location.href = "download.php?file=" + nomeArquivo;
+        }
+    </script>
+
+</body>
+</html>

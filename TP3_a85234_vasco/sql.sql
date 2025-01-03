@@ -1,0 +1,10 @@
+CREATE DATABASE file_upload;
+
+USE file_upload;
+
+CREATE TABLE files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    path VARCHAR(255) NOT NULL,
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
