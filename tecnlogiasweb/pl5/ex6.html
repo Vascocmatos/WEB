@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<script src="funcs.js" defer></script>
+</head>
+<body>
+<form id="myForm">
+Nome (max 10 caracters): <input type="text" id="fname" size="20"><br>
+Idade (1 to 100): <input type="text" id="age" size="20"><br>
+E-mail: <input type="text" id="email" size="20"><br><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+document.getElementById('myForm').addEventListener('submit', function (event) {
+event.preventDefault()
+if (!validate()) {
+return;
+}
+// Se a form for válida, podemos submeter manualmente:
+// this.submit()
+});
+</script>
+</body>
+</html>

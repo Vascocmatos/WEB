@@ -1,0 +1,85 @@
+<!DOCTYPE php>
+<html>
+<head>
+    <title>exercicio2_c</title>
+    <style>
+        .container1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 0.1%;
+            margin: 2;
+            background-color: rgb(15, 150, 150); 
+            color: rgb(0, 0, 0); 
+            width: auto; 
+            text-align: left; 
+            float: left;
+        }
+        .container2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 2%;
+            margin: auto;
+            background-color: rgb(202, 133, 133); /* Alterado para vermelho */
+            color: white; /* Alterado para branco */
+            width: 30%; /* Ajustado o tamanho da caixa */
+            text-align: center; /* Centraliza o texto */
+        }
+        .container3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 2%;
+            margin: auto;
+            background-color: rgb(66, 53, 100); /* Alterado para vermelho */
+            color: white; /* Alterado para branco */
+            width: 30%; /* Ajustado o tamanho da caixa */
+            text-align: center; /* Centraliza o texto */
+            
+        }
+        .container4 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100px; 
+            height: 25px; 
+            background-color: #ffffff; 
+            color: #000000; 
+            margin-right: 10px; 
+            margin: auto;
+        }
+
+
+
+
+    </style>
+</head>
+<body style="background-color: rgb(7, 102, 102);">
+    <div class="container2">
+        <h1>Exercicio1</h1>
+    </div>
+
+    <div class="container3">
+        <form id="sumForm" action="exercicio2_c.php" method="post">
+            valor_1: <input id="id_valor1" type="integer" name="valor_1"> <br/>
+            valor_2: <input id="id_valor2" type="integer" name="valor_2"> <br/>
+
+            <input value="Enviar" id="id_enviar" type="button" name="Enviar" onclick="calcularsomaajax()">
+            <br>
+            <div class="container4" id="resultados"></div>
+
+        </form>
+    </div>
+
+    <script>
+        function calcularsomaajax() {
+            var valor1 = parseFloat(document.getElementById("id_valor1").value);
+            var valor2 = parseFloat(document.getElementById("id_valor2").value);
+            var xhr = new XMLHttpRequest();//XMLHttpRequest é uma forma de enviar e manipular informação sem ter de fazer um novo pedido http
+            xhr.open("POST", "exercicio2_c.php", true);//qual o metodo de envio e para onde
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //que tipo de informação está a ser enviada
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("resultados").innerHTML = xhr.responseText;
+                    }
+                };
+            xhr.send("valor1=" + valor1 + "&valor2=" + valor2);
+        }   
+
+    </script>
+
+</body>
+</html>

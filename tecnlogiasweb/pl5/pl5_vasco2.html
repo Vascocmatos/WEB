@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <title>css e ja</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
+    <form id="myForm">
+        <label for="homem">Homem</label><br>
+        <input type="radio" id="homem" name="sexo"><br>
+        <label for="mulher">Mulher</label><br>
+        <input type="radio" id="mulher" name="sexo"><br>
+    </form>
+
+    <form id="inputs_extram" style="display: none;">
+        <label for="peso">Peso:</label>
+        <input type="text" id="peso" name="peso"><br>
+    </form>
+
+    <form id="inputs_extraf" style="display: none;">
+        <label for="altura">Altura:</label>
+        <input type="text" id="altura" name="altura"><br>
+    </form>
+
+
+
+    <script>
+        var homemRadio = document.getElementById("homem");
+        var mulherRadio = document.getElementById("mulher");
+     
+
+
+
+        homemRadio.addEventListener("click", function() {
+    var inputs_extram = document.getElementById("inputs_extram");
+    var inputs_extraf = document.getElementById("inputs_extraf");
+    if (this.checked) {
+        console.log("AAAAA");
+        inputs_extram.style.display = "block";
+
+        // Define a cor de fundo para o elemento "inputs_extram" como verde
+        inputs_extram.style.backgroundColor = "green";
+
+        // Limpa a cor de texto do elemento "inputs_extram" (se necessário)
+        inputs_extram.style.color = "";
+    } else {
+        console.log("BBBBBB");
+        inputs_extraf.style.display = "none";
+    }
+});
+
+mulherRadio.addEventListener("click", function() {
+    var inputs_extraf = document.getElementById("inputs_extraf");
+    var inputs_extram = document.getElementById("inputs_extram");
+    if (this.checked) {
+        console.log("CCCCC");
+        inputs_extraf.style.display = "block";
+
+        // Define a cor de fundo para o elemento "inputs_extraf" como um azul mais claro
+        inputs_extraf.style.backgroundColor = "#ADD8E6";
+
+        // Limpa a cor de texto do elemento "inputs_extraf" (se necessário)
+        inputs_extraf.style.color = "";
+    } else {
+        console.log("DDDDD");
+        inputs_extram.style.display = "none";
+    }
+});
+
+
+    </script>
+
+
+
+    <form id="questionario1">
+        Nome (max 10 caracters): <input type="text" id="fname" size="20"><br>
+        Idade (1 to 100): <input type="text" id="age" size="20"><br>
+        E-mail: <input type="text" id="email" size="20"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form id="questionario2">
+        morada (max 10 caracters): <input type="text" id="fname" size="100"><br>
+        altura: <input type="text" id="age" size="20"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('questionario1').addEventListener('submit', function(event){
+            event.preventDefault()
+            if (!validate()){
+                return
+            }
+
+        });
+
+        
+    </script>
+
+
+<h1>Página Principal</h1>
+  <p>Clique no link abaixo para abrir uma nova janela pop-up com o conteúdo do exercício "ex6".</p>
+  <a href="ex6.html" target="_blank" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">Abrir Pop-up</a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PL4 exercicio1_a85234</title>
+        
+    </head>
+    
+    <body style="font-family: Arial, Helvetica, sans-serif, sans-serif; margin: 5; padding: 5; background-color: lightgray;">
+        <h1> exercicio2 </h1>
+        <div class="container" style="width:30%; padding: 1%; margin:5%; background-color: aliceblue;" >
+        <form>
+            <label for="valor1"> valor 1:</label>
+            <input id="valor1" type="number" style="margin: auto;">
+            <br>
+            <label for="valor2"> valor 2: </label>
+            <input id="valor2" type="number" style="margin: auto;">      
+        </form>
+        
+        <form>
+            <label for="somar">somar : </label>
+            <input id="somar" type="radio" name="operacao">
+            <br>
+            <label for="subtrair">subtrair : </label>
+            <input id="subtrair" type="radio" name="operacao">
+            <br>
+            <label for="multiplicar">multiplicar : </label>
+            <input id="multiplicar" type="radio" name="operacao">
+            <br>
+            <label fot="dividir">dividir :</label>
+            <input id="dividir" type="radio" name="operacao">
+
+            <br>
+            <input type="button" value="calcular" id="calcular">
+        </form>
+        <div id="resultados">resultados: </div>
+        </div>
+        <!-- <script>
+            document.getElementById("calcular").addEventListener("click", function(){
+                if (document.getElementById("somar").checked == true){
+                    var valor_1_ = parseInt(document.getElementById("valor1").value);
+                    var valor_2_ = parseInt(document.getElementById("valor2").value);
+                    var soma = valor_1_ + valor_2_;
+                    document.getElementById("resultados").innerText = "a soma é : " + soma;
+                }
+                else if (document.getElementById("subtrair").checked == true){
+                    var valor_1_ = parseInt(document.getElementById("valor1").value);
+                    var valor_2_ = parseInt(document.getElementById("valor2").value);
+                    var soma = valor_1_ - valor_2_;
+                    document.getElementById("resultados").innerText = "a subtração é : " + soma;
+                }
+                else if (document.getElementById("multiplicar").checked == true){
+                    var valor_1_ = parseInt(document.getElementById("valor1").value);
+                    var valor_2_ = parseInt(document.getElementById("valor2").value);
+                    var soma = valor_1_ * valor_2_;
+                    document.getElementById("resultados").innerText = "a multiplicação é : " + soma;
+                }
+                else if (document.getElementById("dividir").checked == true){
+                    var valor_1_ = parseInt(document.getElementById("valor1").value);
+                    var valor_2_ = parseInt(document.getElementById("valor2").value);
+                    var soma = valor_1_ / valor_2_;
+                    document.getElementById("resultados").innerText = "a divisão é : " + soma;
+                }
+               
+            });
+
+        </script> -->
+        <script>
+            document.getElementById("calcular").addEventListener("click", function(){
+        var valor_1_ = parseInt(document.getElementById("valor1").value);
+        var valor_2_ = parseInt(document.getElementById("valor2").value);
+        var operador = document.querySelector('input[name="operacao"]:checked').id;
+
+        var resultado;
+        switch (operador) {
+            case "somar":
+                resultado = valor_1_ + valor_2_;
+                document.getElementById("resultados").innerText = "A soma é: " + resultado;
+                break;
+            case "subtrair":
+                resultado = valor_1_ - valor_2_;
+                document.getElementById("resultados").innerText = "A subtração é: " + resultado;
+                break;
+            case "multiplicar":
+                resultado = valor_1_ * valor_2_;
+                document.getElementById("resultados").innerText = "A multiplicação é: " + resultado;
+                break;
+            case "dividir":
+                resultado = valor_1_ / valor_2_;
+                document.getElementById("resultados").innerText = "A divisão é: " + resultado;
+                break;
+            default:
+                document.getElementById("resultados").innerText = "Nenhuma operação selecionada";
+                break;
+        }
+    });
+
+            
+        </script>
+    </body>
+
+</html>

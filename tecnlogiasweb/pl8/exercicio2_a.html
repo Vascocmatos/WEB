@@ -1,0 +1,43 @@
+<!DOCTYPE php>
+<html>
+<head>
+    <title>exercicio_2_a</title>
+    <style>
+        .container1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 1%;
+            margin: auto;
+            background-color: rgb(255, 255, 255); /* Alterado para vermelho */
+            color: white; /* Alterado para branco */
+            width: 30%; /* Ajustado o tamanho da caixa */
+            text-align: center; /* Centraliza o texto */
+        }
+        .container2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 2%;
+            margin: auto;
+            background-color: rgb(202, 133, 133); /* Alterado para vermelho */
+            color: white; /* Alterado para branco */
+            width: 30%; /* Ajustado o tamanho da caixa */
+            text-align: center; /* Centraliza o texto */
+        }
+    </style>
+</head>
+<body style="background-color: rgb(7, 102, 102);">
+    <div class="container2">
+        <h1>Exercicio1</h1>
+    </div>
+
+    <form action="dados.php" method="post">
+        valor_1: <input type="integer" name="valor_1"> <br/>
+        valor_2: <input type="integer" name="valor_2"> <br/>
+        <div class="container1">
+        <input type="radio" id="pagina" name="Enviar"> <label for="pagina" > enviar por nova pagina html</label><br><!-- mostar resultado numa pagina Web -->
+        </div>
+        <input type="radio" id="popup" name="Enviar" > <br>  
+        <input type="radio" id="baixo" name="Enviar" > <br><!-- mostar resultado numa pagina Web -->
+        
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <title>css e java script</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
+    <form id="myForm">
+        <label for="homem">Homem</label><br>
+        <input type="radio" id="homem" name="gender" value="homem"><br>
+        <label for="mulher">Mulher</label><br>
+        <input type="radio" id="mulher" name="gender" value="mulher"><br>
+        <div id="additionalInputs">
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" name="altura"><br>
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso"><br>
+        </div>
+    </form>
+    <script>
+        var homemRadio = document.getElementById("homem");
+        var mulherRadio = document.getElementById("mulher");
+        var additionalInputs = document.getElementById("additionalInputs");
+
+        // Adiciona um evento de clique aos radio buttons
+        homemRadio.addEventListener("click", function() {
+            if (homemRadio.checked) {
+                // Mostra os inputs adicionais se "Homem" for selecionado
+                additionalInputs.style.display = "block";
+            } else {
+                // Oculta os inputs adicionais se "Homem" não estiver selecionado
+                additionalInputs.style.display = "none";
+            }
+        });
+
+        mulherRadio.addEventListener("click", function() {
+            if (mulherRadio.checked) {
+                // Aqui você pode adicionar lógica para mostrar ou ocultar outros inputs adicionais se necessário
+            }
+        });
+    </script>
+</body>
+
+</html>

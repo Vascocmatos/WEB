@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <title>PL5</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
+    <form id="myForm">
+        <label for="homem">Homem</label><br>
+        <input type="radio" id="homem" name="sexo"><br>
+
+        <label for="mulher">Mulher</label><br>
+        <input type="radio" id="mulher" name="sexo"><br>
+    </form>
+
+    <form id="inputs_extram" style="display: none;">
+        <label for="peso">Peso:</label>
+        <input type="text" id="peso" name="peso"><br>
+    </form>
+    <form id="inputs_extraf" style="display: none;">
+        <label for="altura">Altura:</label>
+        <input type="text" id="altura" name="altura"><br>
+    </form>
+
+
+    <script>
+        var homemRadio = document.getElementById("homem");
+        var mulherRadio = document.getElementById("mulher");
+     
+        homemRadio.addEventListener("click", function() {
+        var inputs_extram = document.getElementById("inputs_extram");
+        var inputs_extraf = document.getElementById("inputs_extraf");
+            if (this.checked) {
+                console.log("AAAAA");
+                inputs_extram.style.display = "block";
+
+                // Define a cor de fundo para o elemento "inputs_extram" como verde
+                inputs_extram.style.backgroundColor = "green";
+
+                // Limpa a cor de texto do elemento "inputs_extram" (se necessário)
+                inputs_extram.style.color = "";
+                console.log("BBBBBB");
+                inputs_extraf.style.display = "none";
+            }
+        });
+
+        mulherRadio.addEventListener("click", function() {
+        var inputs_extraf = document.getElementById("inputs_extraf");
+        var inputs_extram = document.getElementById("inputs_extram");
+            if (this.checked) {
+                console.log("CCCCC");
+                inputs_extraf.style.display = "block";
+                
+                // Define a cor de fundo para o elemento "inputs_extraf" como um azul mais claro
+                inputs_extraf.style.backgroundColor = "lightblue";
+
+                inputs_extraf.style.color = "";
+                console.log("DDDDD");
+                inputs_extram.style.display = "none";
+            }
+        });
+
+
+    </script>
+
+    <br>
+    <br>
+    <br>
+
+    <form id="myID">
+        morada (max 10 caracters): <input type="text" id="fname" size="100"><br>
+        altura: <input type="text" id="age" size="20"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <form id="mudarcorq2">
+        <label for="corazul">azul</label>
+        <input type="radio" id="corazul" name="mudar_cor"><br>
+
+        <label for="corvermelho">vermelho</label>
+        <input type="radio" id="corvermelho" name="mudar_cor"><br>
+
+        <label for="corverde">verde</label>
+        <input type="radio" id="corverde" name="mudar_cor"><br>
+    </form>
+    <script>
+        var azul = document.getElementById("corazul")
+        var vermelho = document.getElementById("corvermelho")
+        var verde = document.getElementById("corverde")
+        azul.addEventListener("click", function() {
+            document.getElementById("myID").style.color = "blue"
+            document.getElementById("myID").style.backgroundColor = "white"
+
+        });
+        vermelho.addEventListener("click", function() {
+            document.getElementById("myID").style.color = "red"
+            document.getElementById("myID").style.backgroundColor = "white"
+
+        });
+        verde.addEventListener("click", function() {
+            document.getElementById("myID").style.color = "green"
+            document.getElementById("myID").style.backgroundColor = "white"
+
+        });
+
+    </script>
+
+
+
+<h1>Pagina Principal</h1>
+  <a href="ex6.html" target="_blank" onclick="window.open(this.href, 'popup', 'width=600,height=400'); return false;">quertionario 2</a>
+
+
+</body>
+
+</html>
